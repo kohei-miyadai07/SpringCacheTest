@@ -1,3 +1,6 @@
 spring:
   application:
     name: spring-cache-test-x1
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
