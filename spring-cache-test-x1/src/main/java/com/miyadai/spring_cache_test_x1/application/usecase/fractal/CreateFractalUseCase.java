@@ -21,4 +21,10 @@ public class CreateFractalUseCase {
 		return fractalService.noCacheCreateFractal(size);
 	}
 
+	public BufferedImage executeCache(int width, int height) {
+		Size size = Size.of(width, height);
+
+		return fractalService.cacheCreateFractal(size);
+	}
+
 }

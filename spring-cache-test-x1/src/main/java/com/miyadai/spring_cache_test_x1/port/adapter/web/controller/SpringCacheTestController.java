@@ -26,15 +26,21 @@ public class SpringCacheTestController {
 
 	@GetMapping("/Fractal/new")
 	public String createFractal(Model model) {
-		long start = System.currentTimeMillis();
-		BufferedImage fractal = createFractalUseCase.executeNoCache(800, 800);
-		long end = System.currentTimeMillis();
+		long noCacheStart = System.currentTimeMillis();
+		createFractalUseCase.executeNoCache(800, 800);
+		long noCacheEnd = System.currentTimeMillis();
+
+		long cacheStart = System.currentTimeMillis();
+		BufferedImage fractal = createFractalUseCase.executeCache(800, 800);
+		long cacheEnd = System.currentTimeMillis();
 
 		String base64Image = "data:image/png;base64," + ImageUtil.encodeToBase64(fractal, "png");
 		model.addAttribute("fractalImage", base64Image);
 
-		String time = " [" + (end - start) + "msec]";
-		model.addAttribute("time", time);
+		String noCacheTime = "キャッシュなし処理時間: [" + (noCacheEnd - noCacheStart) + "msec]";
+		String cacheTime = "キャッシュあり処理時間: [" + (cacheEnd - cacheStart) + "msec]";
+		model.addAttribute("noCacheTime", noCacheTime);
+		model.addAttribute("cacheTime", cacheTime);
 
 		return "/Fractal/fractal";
 	}
