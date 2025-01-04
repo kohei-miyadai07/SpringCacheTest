@@ -20,7 +20,7 @@ public class FractalService {
 		return fractal.generateFractal(size);
 	}
 
-	@Cacheable(cacheNames = "fractal-crate-cahe" , keyGenerator = "fractalKeyGenerater")
+	@Cacheable(cacheNames = "fractal-crate-cahe" , keyGenerator = "fractalKeyGenerater", sync = true)
 	public BufferedImage cacheCreateFractal(Size size) {
 		GenerateFractal fractal = new GenerateFractal();
 
