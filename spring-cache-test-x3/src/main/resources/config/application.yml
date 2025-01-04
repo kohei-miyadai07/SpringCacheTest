@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-cache-test-x3
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+  cache:
+    cache-names: "fractal-crate-cahe"
+server:
+  port: 8122
