@@ -11,7 +11,7 @@ public class FractalKeyGenerater implements KeyGenerator {
 
 	@Override
 	public Object generate(Object target, Method method, Object... params) {
-		String key = method.getName() + "_" + Arrays.toString(params);
+		String key = Arrays.toString(params);
 
 		return key;
 	}

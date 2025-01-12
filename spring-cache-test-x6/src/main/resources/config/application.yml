@@ -1,12 +1,12 @@
 spring:
   application:
-    name: spring-cache-test-x5
+    name: spring-cache-test-x6
   thymeleaf:
     cache: false
     prefix: file:src/main/resources/templates/
   cache:
-    cache-names: "fractal-cahe"
+    cache-names: "cache-controll"
     caffeine:
-      spec: "maximumSize=500,expireAfterAccess=10m"
+      spec: "maximumSize=500,expireAfterAccess=3m"
 server:
-  port: 8124
+  port: 8125
