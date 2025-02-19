@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 @CacheConfig(
-		cacheNames = "fractal-cahe",
+		cacheNames = "fractal-crate-cache",
 		keyGenerator = "fractalKeyGenerater",
 		cacheResolver = "fractalCacheResolver")
 public class CacheFractalService {

@@ -19,7 +19,7 @@ public class FractalCacheResolver implements CacheResolver {
 
 	@Override
 	public Collection<? extends Cache> resolveCaches(CacheOperationInvocationContext<?> context) {
-		return Collections.singleton(cacheManager.getCache("fractal-crate-cahe"));
+		return Collections.singleton(cacheManager.getCache("fractal-crate-cache"));
 	}
 
 }
