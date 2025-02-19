@@ -5,7 +5,7 @@ spring:
     cache: false
     prefix: file:src/main/resources/templates/
   cache:
-    cache-names: "fractal-crate-cahe"
+    cache-names: "fractal-crate-cache"
     caffeine:
       spec: "maximumSize=500,expireAfterAccess=10m"
 server:
