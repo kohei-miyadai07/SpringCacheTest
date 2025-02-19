@@ -5,6 +5,6 @@ spring:
     cache: false
     prefix: file:src/main/resources/templates/
   cache:
-    cache-names: "fractal-crate-cahe"
+    cache-names: "fractal-crate-cache"
 server:
   port: 8122
