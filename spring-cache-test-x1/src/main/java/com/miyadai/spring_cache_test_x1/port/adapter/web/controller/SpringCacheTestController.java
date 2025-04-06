@@ -21,7 +21,7 @@ public class SpringCacheTestController {
 	public String index(Model model) {
 		model.addAttribute("message", "Spring Cacheの世界へようこそ!!");
 
-		return "/index";
+		return "index";
 	}
 
 	@GetMapping("/Fractal/new")
@@ -42,7 +42,7 @@ public class SpringCacheTestController {
 		model.addAttribute("noCacheTime", noCacheTime);
 		model.addAttribute("cacheTime", cacheTime);
 
-		return "/Fractal/fractal";
+		return "Fractal/fractal";
 	}
 
 }
