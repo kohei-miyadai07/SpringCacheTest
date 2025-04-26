@@ -3,7 +3,7 @@ spring:
     name: spring-cache-test-x6
   thymeleaf:
     cache: false
-    prefix: file:src/main/resources/templates/
+    prefix: classpath:/templates
   cache:
     cache-names: "cache-controll"
     caffeine:
